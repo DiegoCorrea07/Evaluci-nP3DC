@@ -7,9 +7,12 @@
     Shell.FlyoutBehavior="Disabled"
     Title="EvaluciónP3DC">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Countries" Icon="icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <!--<FlyoutItem Title="Favorite Character" Icon="icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:FavoriteCharacterPage}" />
+    </FlyoutItem>-->
 
 </Shell>
