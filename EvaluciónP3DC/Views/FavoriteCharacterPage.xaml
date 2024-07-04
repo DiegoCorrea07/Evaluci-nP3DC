@@ -4,7 +4,8 @@
              x:Class="EvaluciónP3DC.Views.FavoriteCharacterPage"
              Title="Personaje Favorito">
     <StackLayout>
-        <Image Source="image.png" />
-        <Label Text="A mí, Diego Correa, me gusta este personaje porque..." />
+        <Image Source="image.jpeg" />
+        <Label Text="A mí, Diego Correa, me gusta este personaje porque es un futbolista que a rompido los records encuanto 
+               al fútbol y como persona un ecxelente empresario. Un ejemplo claro a seguir de superación." />
     </StackLayout>
 </ContentPage>

@@ -9,20 +9,30 @@
         <local:CountryViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <Button Text="Load Countries" Command="{Binding LoadCountriesCommand}" />
-        <CollectionView ItemsSource="{Binding Countries}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Name}" />
-                        <Label Text="{Binding Code}" />
-                        <Button Text="Update" Command="{Binding Source={RelativeSource AncestorType={x:Type local:CountryViewModel}}, Path=UpdateCountryCommand}" CommandParameter="{Binding .}" />
-                        <Button Text="Delete" Command="{Binding Source={RelativeSource AncestorType={x:Type local:CountryViewModel}}, Path=DeleteCountryCommand}" CommandParameter="{Binding .}" />
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Padding="10">
+           
+            <Button Text="Cargar Países" Command="{Binding LoadCountriesCommand}" Margin="0,0,0,10"/>
 
+            
+            <CollectionView ItemsSource="{Binding Countries}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Spacing="10" Padding="5">
+                            <Label Text="{Binding Name}" VerticalOptions="Center" />
+                            <Label Text="{Binding Code}" VerticalOptions="Center" />
+                            <Button Text="Actualizar" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:CountryViewModel}}, Path=UpdateCountryCommand}" 
+                                    CommandParameter="{Binding .}" 
+                                    Margin="5,0"/>
+                            <Button Text="Eliminar" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:CountryViewModel}}, Path=DeleteCountryCommand}" 
+                                    CommandParameter="{Binding .}" 
+                                    Margin="5,0"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -11,7 +11,7 @@
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
-    <!--<FlyoutItem Title="Favorite Character" Icon="icon.png">
+    <!--<FlyoutItem Title="Personaje Favorito" Icon="icon.png">
         <ShellContent ContentTemplate="{DataTemplate local:FavoriteCharacterPage}" />
     </FlyoutItem>-->
 
